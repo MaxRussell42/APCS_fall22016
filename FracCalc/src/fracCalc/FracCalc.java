@@ -41,13 +41,13 @@ public class FracCalc {
     	if (add == true){
     		String calculated = addFrac(impFrac1, impFrac2);
     	}
-    	if (subtract == true){
+    	else if (subtract == true){
     		String calculated = subtractFrac(impFrac1, impFrac2);
     	}
-    	if (multiply == true){
+    	else if (multiply == true){
     		String calculated = multiplyFrac(impFrac1, impFrac2);
     	}
-    	if (divide == true){
+    	else if (divide == true){
     		String calculated = divideFrac(impFrac1, impFrac2);
        	}
     	String finalAnswer = calculated;
