@@ -5,4 +5,12 @@
 		<item value="C:\Users\APCS2\Desktop\FracCalc"/>
 		<item value="C:\Users\Maximilian Russell\Desktop\APCS_fall22016\FracCalc"/>
 	</list>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="381" key="DIALOG_X_ORIGIN"/>
+		<item value="185" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>
