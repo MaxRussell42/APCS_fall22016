@@ -4,31 +4,40 @@ import java.util.*;
 
 public class Spreadsheet implements Grid
 {
-
+	private Cell[][]sheet = new Cell[20][12];
+	
+	public Spreadsheet(){
+		for(int i = 0; i < getRows(); i++){
+			for(int j = 0; j < getCols(); j++){
+				sheet[i][j] = new EmptyCell();
+			}
+		}
+	}
 	@Override
 	public String processCommand(String command)
 	{
-		
-		return null;
+		if(command.equals("quit")){
+			
+		}
+		return command;
 	}
 
 	@Override
 	public int getRows()
 	{
-		// TODO Auto-generated method stub
-		return 12;
+		return sheet.length;
 	}
 
 	@Override
 	public int getCols()
 	{
-		// TODO Auto-generated method stub
-		return 20;
+		return sheet[0].length;
 	}
 
 	@Override
 	public Cell getCell(Location loc)
 	{
+		
 		return null;
 	}
 

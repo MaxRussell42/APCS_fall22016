@@ -10,7 +10,7 @@ public class TextExcel
 		 Scanner userInput = new Scanner(System.in);
 		    String input = userInput.nextLine();
 		    while (input != "quit"){
-		    	String command = processCommand(input);
+		    	
 		    }
 	}
 	public String processCommand(String command){

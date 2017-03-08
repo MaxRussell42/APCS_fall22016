@@ -9,4 +9,5 @@ public class EmptyCell implements Cell{
 		String emptyCell = " ";
 		return emptyCell;
 	}
+	
 }
