@@ -13,4 +13,8 @@ public class TextExcel
 		    	
 		    }
 	}
+	public String processCommand(String command){
+		
+		return null;
+	}
 }

@@ -20,6 +20,7 @@ public class SpreadsheetLocation implements Location
     
     public SpreadsheetLocation(String cellName)
     {
+        String[] parseInput = new String[2];
         
     }
 
