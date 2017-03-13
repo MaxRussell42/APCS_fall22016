@@ -16,9 +16,11 @@ public class Spreadsheet implements Grid
 	@Override
 	public String processCommand(String command)
 	{
-		if(command.equals("quit")){
+		String[] trueCommand = command.split(" ");
+		if(trueCommand.equals("quit")){
 			
 		}
+		
 		return command;
 	}
 
