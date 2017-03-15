@@ -1,14 +1,16 @@
 package textExcel;
 
 public class TextCell {
-	TextCell text = new TextCell();
+	private String textCell;
+	public TextCell(String inputText){
+		textCell = inputText;
+	}
 	
 	public String abbreviatedCellText(){
-		String textCell = "          ";
-		return textCell;
+		String abbreviatedCell = ((textCell+"          ".substring(0,10)));
+		return abbreviatedCell;
 	}
 	public String fullCellText(){
-		String textCell = " ";
 		return textCell;
 	}
 	

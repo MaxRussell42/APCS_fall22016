@@ -39,8 +39,9 @@ public class Spreadsheet implements Grid
 	@Override
 	public Cell getCell(Location loc)
 	{
-		
-		return null;
+		int row = loc.getRow();
+		int cols = loc.getCol();
+		return(cells[row][cols]);
 	}
 
 	@Override
