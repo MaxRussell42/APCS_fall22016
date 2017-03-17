@@ -41,7 +41,7 @@ public class Spreadsheet implements Grid
 	{
 		int row = loc.getRow();
 		int cols = loc.getCol();
-		return(cells[row][cols]);
+		return(sheet[row][cols]);
 	}
 
 	@Override

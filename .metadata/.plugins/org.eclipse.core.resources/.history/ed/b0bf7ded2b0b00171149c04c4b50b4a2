@@ -16,8 +16,12 @@ public class Spreadsheet implements Grid
 	@Override
 	public String processCommand(String command)
 	{
+		String[] trueCommand = command.split(" ");
+		if(trueCommand.equals("quit")){
+			
+		}
 		
-		return null;
+		return command;
 	}
 
 	@Override
@@ -35,7 +39,9 @@ public class Spreadsheet implements Grid
 	@Override
 	public Cell getCell(Location loc)
 	{
-		return null;
+		int row = loc.getRow();
+		int cols = loc.getCol();
+		return(cells[row][cols]);
 	}
 
 	@Override
