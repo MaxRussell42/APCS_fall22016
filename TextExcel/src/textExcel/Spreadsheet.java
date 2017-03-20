@@ -17,10 +17,18 @@ public class Spreadsheet implements Grid
 	public String processCommand(String command)
 	{
 		String[] trueCommand = command.split(" ");
-		if(trueCommand.equals("quit")){
-			
+		if(trueCommand[0].toLowerCase().equals("clear")){		//for clearing entire sheet
+			if(trueCommand.length==1){
+				for(int i = 0; i < this.getRows(); i++){
+					for(int j = 0; j < this.getCols(); j++){
+						cells[i][j] = new EmptyCell();
+					}
+				}
+			}else{							//for clearing a specific cell
+				SpreadsheetLocation loc= new SpreadsheetLocation(trueCommand[1]);
+				cells[loc.getRow()][loc.getCol()]=new EmptyCell();
+			}
 		}
-		
 		return command;
 	}
 
@@ -47,8 +55,35 @@ public class Spreadsheet implements Grid
 	@Override
 	public String getGridText()
 	{
+		String wholeSheet = "";					//initialize sheet for string and first header pipe
+		String header = "   |";
+		char col = 'A';
+		for(int i = 0; i <this.getCols(); i++){			//format for lettered columns
+			header += ((char)(col)) + "         |";
+			col += 1;
+		}
+		header += "\n";						//moves to next line
+		for(int i = 0; i < this.getRows(); i++){		//formats for different row numbers
+			if(i < 9){
+				header += (i + 1) + "  |";
+			} else {
+				header += (i + 1) + " |";
+			}
+			for(int j; j > this.getCols(); j++){
+				header += sheet[i][j].abbreviatedCellText + "|";
+			}
+			header += "\n";
+		}
+		return wholeSheet;
+	}
 		
-		return null;
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
