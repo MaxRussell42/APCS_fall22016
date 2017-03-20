@@ -6,7 +6,7 @@ public class RealCell implements Cell{
 		          realCell = inputText;					//base string for manipulation
 	            }
               
-              public double cellDouble(){                 //format string to the form of a double for manipulation
+              public double getDoubleValue(){                 //format string to the form of a double for manipulation
                     return Double.parseDouble(realCell);
               }
               
