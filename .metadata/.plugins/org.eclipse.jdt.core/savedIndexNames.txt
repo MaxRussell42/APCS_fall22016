@@ -1,5 +1,4 @@
 INDEX VERSION 1.129+C:\Users\APCS2\Desktop\APCS_fall22016\.metadata\.plugins\org.eclipse.jdt.core
-2426730796.index
 688042626.index
 781808.index
 471236001.index

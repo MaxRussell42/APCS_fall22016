@@ -21,12 +21,12 @@ public class Spreadsheet implements Grid
 			if(trueCommand.length==1){
 				for(int i = 0; i < this.getRows(); i++){
 					for(int j = 0; j < this.getCols(); j++){
-						sheet[i][j] = new EmptyCell();
+						cells[i][j] = new EmptyCell();
 					}
 				}
 			}else{							//for clearing a specific cell
 				SpreadsheetLocation loc= new SpreadsheetLocation(trueCommand[1]);
-				sheet[loc.getRow()][loc.getCol()]=new EmptyCell();
+				cells[loc.getRow()][loc.getCol()]=new EmptyCell();
 			}
 		}
 		return command;
@@ -69,13 +69,21 @@ public class Spreadsheet implements Grid
 			} else {
 				header += (i + 1) + " |";
 			}
-			for(int j = 0; j > this.getCols(); j++){
-				header += sheet[i][j].abbreviatedCellText() + "|";
+			for(int j; j > this.getCols(); j++){
+				header += sheet[i][j].abbreviatedCellText + "|";
 			}
 			header += "\n";
 		}
 		return wholeSheet;
-	}	
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
 }
-
-

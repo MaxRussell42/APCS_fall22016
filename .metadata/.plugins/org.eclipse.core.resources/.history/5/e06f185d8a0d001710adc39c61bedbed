@@ -15,7 +15,6 @@ public class TextCell {
 			return abbreviatedCell;
 		} else {
 		return abbreviatedCell;					//returns if already true
-		}
 	}
 	public String fullCellText(){		
 		return textCell;					//no change needed 
