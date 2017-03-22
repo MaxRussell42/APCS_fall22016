@@ -25,6 +25,7 @@ public class Spreadsheet implements Grid
 					}
 				}
 			}else{							//for clearing a specific cell
+				trueCommand[1] = trueCommand[1].toUpperCase();
 				SpreadsheetLocation loc= new SpreadsheetLocation(trueCommand[1]);
 				sheet[loc.getRow()][loc.getCol()]=new EmptyCell();
 			}
