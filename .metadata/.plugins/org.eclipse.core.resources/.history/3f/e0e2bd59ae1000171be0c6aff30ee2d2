@@ -6,16 +6,13 @@ public class TextExcel
 
 	public static void main(String[] args)
 	{
-		/*Spreadsheet spreadsheet = new Spreadsheet();
+		Spreadsheet spreadsheet = new Spreadsheet();
 		Scanner userInput = new Scanner(System.in);		//create scanner
 		String input = userInput.nextLine();								//create string for input commands
 		while (!input.equals("quit")){				//loop for command processing
 			System.out.println(spreadsheet.processCommand(input));
 			input = userInput.nextLine();
 		    }
-		userInput.close(); */
-		Spreadsheet iDontCare = new Spreadsheet();
-		SpreadsheetLocation hi = new SpreadsheetLocation("A2");
-		
+		userInput.close();
 	}
 }

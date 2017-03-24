@@ -16,6 +16,6 @@ public class TextExcel
 		userInput.close(); */
 		Spreadsheet iDontCare = new Spreadsheet();
 		SpreadsheetLocation hi = new SpreadsheetLocation("A2");
-		
+		System.out.println(hi.getRow());
 	}
 }

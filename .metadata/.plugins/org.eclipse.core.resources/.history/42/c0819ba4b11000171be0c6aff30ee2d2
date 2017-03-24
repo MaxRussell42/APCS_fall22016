@@ -24,16 +24,10 @@ public class Spreadsheet implements Grid
 						sheet[i][j] = new EmptyCell();
 					}
 				}
-				//move this
 			}else{							//for clearing a specific cell
 				trueCommand[1] = trueCommand[1].toUpperCase();
 				SpreadsheetLocation loc= new SpreadsheetLocation(trueCommand[1]);
 				sheet[loc.getRow()][loc.getCol()]=new EmptyCell();
-			}
-			else if(trueCommand.length >= 3){
-				SpreadsheetLocation value = new SpreadsheetLocation(trueCommand[0]);
-				sheet[loc.getRow()][loc.getCol()] = new TextCell();
-				return getGridText
 			}
 		}
 		return command;
