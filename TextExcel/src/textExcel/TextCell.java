@@ -1,11 +1,12 @@
 package textExcel;
 
-public class TextCell {
+public class TextCell implements Cell{
 	private String textCell;
-	public TextCell(String inputText){
-		textCell = inputText;					//base string for manipulation
-	}
 	
+	public TextCell(String inputText) {
+		textCell = inputText;			
+	}
+
 	public String abbreviatedCellText(){
 		String abbreviatedCell = textCell;
 		if(abbreviatedCell.length()<10){			//makes cell equal 10
@@ -13,10 +14,14 @@ public class TextCell {
 				abbreviatedCell += " "; 
 			}
 			return abbreviatedCell;
-		} else {
-		return abbreviatedCell;					//returns if already true
+		} else if(abbreviatedCell.length()>10){		//makes cell equal ten if greater
+				abbreviatedCell = abbreviatedCell.substring(0, 10);
+				return abbreviatedCell;
+		} else{	
+			return abbreviatedCell;					//returns if already true
 		}
 	}
+	
 	public String fullCellText(){		
 		return textCell;					//no change needed 
 	}

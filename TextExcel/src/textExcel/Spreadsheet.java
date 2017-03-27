@@ -17,7 +17,7 @@ public class Spreadsheet implements Grid
 	public String processCommand(String command)
 	{
 		String[] trueCommand = command.split(" ");
-		if(trueCommand[0].toUpperCase().equals("CLEAR")){		//for clearing entire sheet
+		if(trueCommand[0].toLowerCase().equals("clear")){		//for clearing entire sheet
 			if(trueCommand.length==1){
 				for(int i = 0; i < this.getRows(); i++){
 					for(int j = 0; j < this.getCols(); j++){
@@ -28,14 +28,14 @@ public class Spreadsheet implements Grid
 			}else{							//for clearing a specific cell
 				trueCommand[1] = trueCommand[1].toUpperCase();
 				SpreadsheetLocation loc= new SpreadsheetLocation(trueCommand[1]);
-				sheet[loc.getRow()][loc.getCol()]=new EmptyCell();
-			}
-			else if(trueCommand.length >= 3){
-				SpreadsheetLocation value = new SpreadsheetLocation(trueCommand[0]);
-				sheet[loc.getRow()][loc.getCol()] = new TextCell();
-				return getGridText
+				sheet[loc.getRow()][loc.getCol()]= new EmptyCell();
 			}
 		}
+			else if(trueCommand.length >= 3){						//testing if input is EX: "A2 ... <some command>"
+				SpreadsheetLocation loc = new SpreadsheetLocation(trueCommand[0]);
+				sheet[loc.getRow()][loc.getCol()] = new TextCell(trueCommand[3]);
+				return getGridText();
+			}
 		return command;
 	}
 
