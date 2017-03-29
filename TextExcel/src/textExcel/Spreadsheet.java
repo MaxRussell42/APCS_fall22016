@@ -36,8 +36,12 @@ public class Spreadsheet implements Grid
 				sheet[loc.getRow()][loc.getCol()] = new TextCell(trueCommand[3]);
 				return getGridText();
 			}
-		return command;
+			 else if(trueCommand[0].equals("grid"));
+			String sheet = getGridText();
+			return sheet; 
 	}
+	//	return command;
+	//}
 
 	@Override
 	public int getRows()
@@ -66,20 +70,20 @@ public class Spreadsheet implements Grid
 		String header = "   |";
 		char col = 'A';
 		for(int i = 0; i <this.getCols(); i++){			//format for lettered columns
-			header += ((char)(col)) + "         |";
-			col += 1;
+			header += ((char)(col+i)) + "         |";
 		}
-		header += "\n";									//moves to next line
+		wholeSheet += header + "\n";									//moves to next line
+		String cell = "";
 		for(int i = 0; i < this.getRows(); i++){		//formats for different row numbers
 			if(i < 9){
-				header += (i + 1) + "  |";
+				cell = ((i + 1) + "  |");
 			} else {
-				header += (i + 1) + " |";
+				cell = ((i + 1) + " |");
 			}
-			for(int j = 0; j > this.getCols(); j++){
-				header += sheet[i][j].abbreviatedCellText() + "|";
+			for(int j = 0; j < sheet[0].length; j++){
+				cell += sheet[i][j].abbreviatedCellText() + "|";
 			}
-			header += "\n";
+			wholeSheet += cell + "\n";
 		}
 		return wholeSheet;
 	}	
